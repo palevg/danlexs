@@ -36,12 +36,32 @@ ul {
     background-image: linear-gradient(to right, #000000, #3533cd);
 }
 
+/* Cookies */
+.cookie {
+    position: fixed;
+    top: 64px;
+    z-index: 10;
+    width: 100%;
+    padding: 24px 16px;
+    background-color: yellow;
+    border-bottom: 2px solid orange;
+    text-align: center;
+}
+
+.cookie__buttons {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 /* Header */
 .header {
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 5;
     width: 100%;
 }
 
@@ -317,7 +337,7 @@ ul {
 
 .page__contact-text>h3 {
     font-size: 44px;
-    margin: 24px auto 8px;
+    margin: 8px auto 8px;
 }
 
 .page__contact-text>hr {
@@ -358,6 +378,35 @@ ul {
     background-image: linear-gradient(to top, #000000, #3533cd);
 }
 
+.page__privacy {
+    padding: 32px 16px;
+}
+
+.page__privacy>h2 {
+    color: orange;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.page__privacy p {
+    margin-bottom: 8px;
+}
+
+.page__privacy ol {
+    margin: 0 0 8px 16px;
+}
+
+.page__privacy h4 {
+    margin: 24px 0 8px;
+}
+
+.page__privacy a,
+.highlight {
+    /* font-weight: bold; */
+    color: blue;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -383,6 +432,10 @@ ul {
 }
 
 @media (min-width: 768px) {
+    html {
+        scroll-behavior: smooth;
+    }
+
     .header__nav {
         max-height: none;
         top: 0;
@@ -519,6 +572,10 @@ ul {
     .page__contact-img {
         gap: 40px;
         height: 300px;
+    }
+
+    .page__privacy>h2 {
+        font-size: 32px;
     }
 
     .footer {

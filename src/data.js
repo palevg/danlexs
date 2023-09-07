@@ -13,7 +13,9 @@ export const texts = [
         of5: "Produkcja modulej sanitarnych i higienicznych", of6: "Produkcja elementów placów zabaw",
         prHead: "Dlaczego składane są u nas zamówienia", prReas1: "mamy zrównoważone ceny, zawsze niższe niż konkurenci zatrudniamy specjalistów, którzy przeszli certyfikację ISO 9001:2015",
         prReas2: "wyprodukujemy produkty według Twojego szkicu, rysunku lub próbki", prReas3: "gwarantujemy jakość produktów, terminowość dostaw i zgodność ze wszystkimi normami",
-        opf: "Spółka z ograniczoną odpowiedzialnością", str: "ul.", city: "Warszawa", country: "Polska"
+        opf: "Spółka z ograniczoną odpowiedzialnością", str: "ul.", city: "Warszawa", country: "Polska",
+        polpr: "Polityka prywatności", cookacc: "Akceptuję", cookmore: "Dowiedz się więcej",
+        cookie: 'W naszym Serwisie używamy plików cookies. Korzystając dalej z Serwisu, wyrażasz zgodę na stosowanie plików cookies zgodnie z Polityką prywatności. Wyrażenie zgody jest dobrowolne, w każdej chwili można ją cofnąć poprzez zmianę ustawień dotyczących plików "cookies" w używanej przeglądarce internetowej. Kliknij "Akceptuję", aby ta informacja nie wyświetlała się więcej.'
     },
     {
         miHome: "Home", miAbout: "Über uns", miTech: "Technologien", miOffer: "Unser Angebot", miContact: "Kontakt",
@@ -29,7 +31,9 @@ export const texts = [
         of5: "Produktion von Sanitär- und Hygienemodulen", of6: "Herstellung von Spielplatzelementen",
         prHead: "Warum bei uns Bestellungen aufgegeben werden", prReas1: "Wir haben ausgewogene Preise, die immer niedriger sind als die der Konkurrenz. Wir beschäftigen Spezialisten, die die ISO 9001:2015-Zertifizierung bestanden haben",
         prReas2: "Wir fertigen Produkte nach Ihrer Skizze, Zeichnung oder Ihrem Muster", prReas3: "Wir garantieren Produktqualität, pünktliche Lieferungen und die Einhaltung aller Standards",
-        opf: "Gesellschaft mit beschränkter Haftung", str: "st.", city: "Warschau", country: "Polen"
+        opf: "Gesellschaft mit beschränkter Haftung", str: "st.", city: "Warschau", country: "Polen",
+        polpr: "Datenschutzrichtlinie", cookacc: "Ich akzeptiere", cookmore: "Finde mehr heraus",
+        cookie: 'Wir verwenden Cookies auf unserer Website. Durch die weitere Nutzung der Website stimmen Sie der Verwendung von Cookies gemäß der Datenschutzrichtlinie zu. Die Einwilligung ist freiwillig, sie kann jederzeit widerrufen werden, indem Sie die Einstellungen für "Cookies" im verwendeten Webbrowser ändern. Klicken Sie auf "Akzeptieren", um diese Informationen nicht mehr anzuzeigen.'
     },
     {
         miHome: "Home", miAbout: "About us", miTech: "Technologies", miOffer: "Our offer", miContact: "Contact",
@@ -45,6 +49,8 @@ export const texts = [
         of5: "Production of sanitary and hygienic modules", of6: "Production of playground elements",
         prHead: "Why orders are placed with us", prReas1: "we have balanced prices, always lower than competitors we employ specialists who have passed ISO 9001:2015 certification",
         prReas2: "we will produce products according to your sketch, drawing or sample", prReas3: "we guarantee product quality, timely deliveries and compliance with all standards",
-        opf: "Limited liability company", str: "st.", city: "Warsaw", country: "Poland"
+        opf: "Limited liability company", str: "st.", city: "Warsaw", country: "Poland",
+        polpr: "Privacy policy", cookacc: "I accept", cookmore: "Find out more",
+        cookie: 'We use cookies on our website. By continuing to use the Website, you consent to the use of cookies in accordance with the Privacy Policy. Consent is voluntary and can be withdrawn at any time by changing the cookie settings in the web browser used. Click "I accept" to no longer display this information.'
     }
 ];
