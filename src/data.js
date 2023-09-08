@@ -1,6 +1,6 @@
 export const texts = [
     {
-        miHome: "Home", miAbout: "O nas", miTech: "Technologie", miOffer: "Nasza oferta", miContact: "Kontakt",
+        miMain: "Główny", miAbout: "O nas", miTech: "Technologie", miOffer: "Nasza oferta", miContact: "Kontakt", miHome: "Strona startowa",
         mProj: "PROJEKTOWANIE I PRODUKCJA Z LAMINATU POLIESTROWO-SZKLANEGO",
         aboutDesc: "25 lat doświadczenia w projektowaniu i produkcji kompozytowych podzespołów i system do wnętrz i zewnętrznych części lokomotyw wagonów i tramwajów. Realizowane projekty w Niemczech, Rumunii, Bułgarii i na Ukrainie. Własne biuro projektowe i nowoczesna produkcja w dwóch krajach. Produkujemy 30 ton wyrobów z włókna szklanego miesięcznie.",
         teHead: "Technologia FRP polimery wzmocnione włóknem", te1h: "Laminat ręczny HLU",
@@ -15,10 +15,12 @@ export const texts = [
         prReas2: "wyprodukujemy produkty według Twojego szkicu, rysunku lub próbki", prReas3: "gwarantujemy jakość produktów, terminowość dostaw i zgodność ze wszystkimi normami",
         opf: "Spółka z ograniczoną odpowiedzialnością", str: "ul.", city: "Warszawa", country: "Polska",
         polpr: "Polityka prywatności", cookacc: "Akceptuję", cookmore: "Dowiedz się więcej",
-        cookie: 'W naszym Serwisie używamy plików cookies. Korzystając dalej z Serwisu, wyrażasz zgodę na stosowanie plików cookies zgodnie z Polityką prywatności. Wyrażenie zgody jest dobrowolne, w każdej chwili można ją cofnąć poprzez zmianę ustawień dotyczących plików "cookies" w używanej przeglądarce internetowej. Kliknij "Akceptuję", aby ta informacja nie wyświetlała się więcej.'
+        cookie: 'W naszym Serwisie używamy plików cookies. Korzystając dalej z Serwisu, wyrażasz zgodę na stosowanie plików cookies zgodnie z Polityką prywatności. Wyrażenie zgody jest dobrowolne, w każdej chwili można ją cofnąć poprzez zmianę ustawień dotyczących plików "cookies" w używanej przeglądarce internetowej. Kliknij "Akceptuję", aby ta informacja nie wyświetlała się więcej.',
+        contHead: "Skontaktuj się z nami", contName: "Imię", contSubj: "Temat", contText: "Wiadomość", reqField: "Pole wymagane",
+        cancel: "Anulować", send: "Wysłać", badEmail: "Nieprawidłowy adres e-mail", resEmail0: "E-mail nie został wysłany", resEmail1: "Twoja wiadomość została wysłana. Dziękuję!"
     },
     {
-        miHome: "Home", miAbout: "Über uns", miTech: "Technologien", miOffer: "Unser Angebot", miContact: "Kontakt",
+        miMain: "Hauptsächlich", miAbout: "Über uns", miTech: "Technologien", miOffer: "Unser Angebot", miContact: "Kontakt", miHome: "Startseite",
         mProj: "ENTWURF UND HERSTELLUNG VON POLYESTER-GLAS-LAMINAT",
         aboutDesc: "25 Jahre Erfahrung in der Entwicklung und Produktion von Verbundkomponenten und -systemen für den Innen- und Außenbereich von Lokomotiven, Waggons und Straßenbahnen. Realisierte Projekte in Deutschland, Rumänien, Bulgarien und der Ukraine. Eigenes Designbüro und moderne Produktion in zwei Ländern. Wir produzieren 30 Tonnen Glasfaserprodukte pro Monat.",
         teHead: "Faserverstärkte Polymere mit FRP-Technologie", te1h: "Handlaminat HLU",
@@ -33,10 +35,12 @@ export const texts = [
         prReas2: "Wir fertigen Produkte nach Ihrer Skizze, Zeichnung oder Ihrem Muster", prReas3: "Wir garantieren Produktqualität, pünktliche Lieferungen und die Einhaltung aller Standards",
         opf: "Gesellschaft mit beschränkter Haftung", str: "st.", city: "Warschau", country: "Polen",
         polpr: "Datenschutzrichtlinie", cookacc: "Ich akzeptiere", cookmore: "Finde mehr heraus",
-        cookie: 'Wir verwenden Cookies auf unserer Website. Durch die weitere Nutzung der Website stimmen Sie der Verwendung von Cookies gemäß der Datenschutzrichtlinie zu. Die Einwilligung ist freiwillig, sie kann jederzeit widerrufen werden, indem Sie die Einstellungen für "Cookies" im verwendeten Webbrowser ändern. Klicken Sie auf "Akzeptieren", um diese Informationen nicht mehr anzuzeigen.'
+        cookie: 'Wir verwenden Cookies auf unserer Website. Durch die weitere Nutzung der Website stimmen Sie der Verwendung von Cookies gemäß der Datenschutzrichtlinie zu. Die Einwilligung ist freiwillig, sie kann jederzeit widerrufen werden, indem Sie die Einstellungen für "Cookies" im verwendeten Webbrowser ändern. Klicken Sie auf "Akzeptieren", um diese Informationen nicht mehr anzuzeigen.',
+        contHead: "Kontaktiere uns", contName: "Name", contSubj: "Thema", contText: "Nachricht", reqField: "Pflichtfeld",
+        cancel: "Abbrechen", send: "Schicken", badEmail: "Falsche E-Mail Adresse", resEmail0: "E-Mail nicht gesendet", resEmail1: "Ihre Nachricht wurde gesendet. Danke schön!"
     },
     {
-        miHome: "Home", miAbout: "About us", miTech: "Technologies", miOffer: "Our offer", miContact: "Contact",
+        miMain: "Main", miAbout: "About us", miTech: "Technologies", miOffer: "Our offer", miContact: "Contact", miHome: "Home",
         mProj: "DESIGN AND PRODUCTION OF POLYESTER-GLASS LAMINATE",
         aboutDesc: "25 years of experience in the design and production of composite components and systems for the interior and exterior of locomotives, wagons and trams. Implemented projects in Germany, Romania, Bulgaria and Ukraine. Own design office and modern production in two countries. We produce 30 tons of fiberglass products per month.",
         teHead: "FRP technology fiber reinforced polymers", te1h: "Hand laminate HLU",
@@ -51,6 +55,8 @@ export const texts = [
         prReas2: "we will produce products according to your sketch, drawing or sample", prReas3: "we guarantee product quality, timely deliveries and compliance with all standards",
         opf: "Limited liability company", str: "st.", city: "Warsaw", country: "Poland",
         polpr: "Privacy policy", cookacc: "I accept", cookmore: "Find out more",
-        cookie: 'We use cookies on our website. By continuing to use the Website, you consent to the use of cookies in accordance with the Privacy Policy. Consent is voluntary and can be withdrawn at any time by changing the cookie settings in the web browser used. Click "I accept" to no longer display this information.'
+        cookie: 'We use cookies on our website. By continuing to use the Website, you consent to the use of cookies in accordance with the Privacy Policy. Consent is voluntary and can be withdrawn at any time by changing the cookie settings in the web browser used. Click "I accept" to no longer display this information.',
+        contHead: "Contact us", contName: "Name", contSubj: "Subject", contText: "Message", reqField: "Required field",
+        cancel: "Cancel", send: "Send", badEmail: "Incorrect email address", resEmail0: "Email not sent", resEmail1: "Your message has been sent. Thank you!"
     }
 ];

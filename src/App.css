@@ -36,13 +36,42 @@ ul {
     background-image: linear-gradient(to right, #000000, #3533cd);
 }
 
+.page__anchors-wrap {
+    width: 152px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #006aff;
+    position: fixed;
+    top: 96px;
+    left: -132px;
+    transition: left 0.5s;
+}
+
+.page__anchors-wrap:hover {
+    left: -8px;
+    transition: left 0.5s;
+}
+
+.page__anchors {
+    width: 140px;
+    padding: 16px 16px 8px;
+    border-radius: 8px;
+    background-color: #006aff;
+    position: relative;
+    top: -16px;
+}
+
+.page__anchors>div {
+    padding-bottom: 12px;
+}
+
 /* Cookies */
 .cookie {
     position: fixed;
     top: 64px;
     z-index: 10;
     width: 100%;
-    padding: 24px 16px;
+    padding: 24px 160px;
     background-color: yellow;
     border-bottom: 2px solid orange;
     text-align: center;
@@ -151,7 +180,6 @@ ul {
 
 .header__lang {
     margin: 16px;
-    color: white;
     text-align: end;
 }
 
@@ -378,6 +406,17 @@ ul {
     background-image: linear-gradient(to top, #000000, #3533cd);
 }
 
+.page__contact-email {
+    margin-left: 48px;
+    cursor: pointer;
+    transition: all .8s;
+}
+
+.page__contact-email:hover {
+    transform: scale(1.5) rotate(360deg);
+    transition: all .8s;
+}
+
 .page__privacy {
     padding: 32px 16px;
 }
@@ -431,6 +470,12 @@ ul {
     margin-right: 8px;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .cookie {
+        padding: 24px 48px;
+    }
+}
+
 @media (min-width: 768px) {
     html {
         scroll-behavior: smooth;
@@ -452,6 +497,7 @@ ul {
     .header__menu a:hover {
         background-color: transparent;
         color: lightskyblue;
+        border-bottom: 2px solid lightskyblue;
     }
 
     .header__hamb {
@@ -460,6 +506,9 @@ ul {
 }
 
 @media (max-width: 767px) {
+    .cookie {
+        padding: 24px 16px;
+    }
     .header__nav {
         background-color: blue;
         background-image: -webkit-linear-gradient(right, #000000, #3533cd);

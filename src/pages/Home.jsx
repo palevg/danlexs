@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 import Cookie from "../components/Cookie";
 import { texts } from "../data";
@@ -14,12 +15,29 @@ import imgSilos from "../images/silos.jpg";
 import imgHigien from "../images/higien.jpg";
 import imgZabaw from "../images/zabaw.jpg";
 import FacebookIcon from '@mui/icons-material/Facebook';
+import EmailIcon from '@mui/icons-material/Email';
 import imgContact from "../images/contact.webp";
+import { SendEmail } from "../components/SendEmail";
 
 const Home = ({ lang }) => {
+  const [openDialog, setOpenDialog] = useState(false);
+  const stateDialog = (value) => { setOpenDialog(value); }
+
+  const contactUs = () => {
+    setOpenDialog(true);
+  }
   return (
     <main className="page">
       <Cookie lang={lang} />
+      <div className="page__anchors-wrap">
+        <div className="page__anchors">
+          <div><a href="/#home">{texts[lang].miMain}</a></div>
+          <div><a href="/#about">{texts[lang].miAbout}</a></div>
+          <div><a href="/#tech">{texts[lang].miTech}</a></div>
+          <div><a href="/#oferta">{texts[lang].miOffer}</a></div>
+          <div><a href="/#contact">{texts[lang].miContact}</a></div>
+        </div>
+      </div>
       <article className="page__start bg-gradient">
         <div>
           <div className="page__start-name">
@@ -131,7 +149,10 @@ const Home = ({ lang }) => {
             <p><a href="tel:+48886684189">tel. +48 886 684 189</a></p>
             <p>e-mail: <a href="mailto:danlexsspot@gmail.com">danlexsspot@gmail.com</a></p>
             <p style={{ marginBottom: "24px" }}><a href="https://danlexsspot.pl/">www.danlexsspot.pl</a></p>
-            <p style={{ marginBottom: "24px" }}><a href="https://www.facebook.com/profile.php?id=100095049682068"><FacebookIcon fontSize="large" /></a></p>
+            <p style={{ marginBottom: "24px" }}>
+              <a href="https://www.facebook.com/profile.php?id=100095049682068"><FacebookIcon fontSize="large" /></a>
+              <EmailIcon onClick={contactUs} fontSize="large" className="page__contact-email" />
+            </p>
             <p><Link to="/privacy">{texts[lang].polpr}</Link></p>
           </div>
         </div>
@@ -140,6 +161,7 @@ const Home = ({ lang }) => {
           <img src={imgContact} alt={texts[lang].miContact} />
         </div>
       </article>
+      {openDialog && <SendEmail open={openDialog} stateDialog={stateDialog} lang={lang} />}
     </main>
   )
 }

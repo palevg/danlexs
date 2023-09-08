@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import { TextField, Box, MenuItem } from '@mui/material';
 import { texts } from "../data";
 
@@ -30,11 +31,8 @@ const Header = (props) => {
         <label className="header__hamb" htmlFor="side-menu"><span className="header__hamb-line"></span></label>
         <nav className="header__nav">
           <ul className="header__menu" onClick={handleMenuClick}>
-            <li><a href="/#home">{texts[lang].miHome}</a></li>
-            <li><a href="/#about">{texts[lang].miAbout}</a></li>
-            <li><a href="/#tech">{texts[lang].miTech}</a></li>
-            <li><a href="/#oferta">{texts[lang].miOffer}</a></li>
-            <li><a href="/#contact">{texts[lang].miContact}</a></li>
+            <li><Link to="/">{texts[lang].miHome}</Link></li>
+            <li><Link to="/privacy">{texts[lang].polpr}</Link></li>
           </ul>
         </nav>
       </div>
@@ -45,7 +43,7 @@ const Header = (props) => {
           variant="standard"
           value={lang}
           onChange={(event) => { handleChangeLang(event.target.value) }}
-          InputProps={{ disableUnderline: true, sx: { color: "white" } }}
+          InputProps={{ disableUnderline: true, sx: { color: "white", backgroundColor: "transparent" } }}
         >
           {languages.map((option) => (
             <MenuItem key={option.id} value={option.id}>
