@@ -14,6 +14,7 @@ import imgWagon from "../images/wagon.jpg";
 import imgSilos from "../images/silos.jpg";
 import imgHigien from "../images/higien.jpg";
 import imgZabaw from "../images/zabaw.jpg";
+import { Tooltip } from "@mui/material";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
 import imgContact from "../images/contact.webp";
@@ -55,7 +56,7 @@ const Home = ({ lang }) => {
         <h3>{texts[lang].miAbout.toUpperCase()}</h3>
         <div>
           <img className="page__start-image" src={imgAbout} alt={texts[lang].miAbout} />
-          <div className="page__about-desc">{texts[lang].aboutDesc}</div>
+          <div className="page__about-desc">{texts[lang].aboutDesc}.</div>
         </div>
       </article>
       <a href="anchor" name="tech"></a>
@@ -67,21 +68,21 @@ const Home = ({ lang }) => {
               <img src={imgHLU} alt={texts[lang].te1h} />
             </figure>
             <h5>{texts[lang].te1h}</h5>
-            <div>{texts[lang].te1desc}</div>
+            <div>{texts[lang].te1desc}.</div>
           </div>
           <div className="page__tech-block">
             <figure>
               <img src={imgInfus} alt={texts[lang].te2h} />
             </figure>
             <h5>{texts[lang].te2h}</h5>
-            <div>{texts[lang].te2desc}</div>
+            <div>{texts[lang].te2desc}.</div>
           </div>
           <div className="page__tech-block">
             <figure>
               <img src={imgNapyl} alt={texts[lang].te3h} />
             </figure>
             <h5>{texts[lang].te3h}</h5>
-            <div>{texts[lang].te3desc}</div>
+            <div>{texts[lang].te3desc}.</div>
           </div>
         </div>
       </article>
@@ -141,7 +142,7 @@ const Home = ({ lang }) => {
           <div>
             <p>Danlexs Spot</p>
             <p>{texts[lang].opf}</p>
-            <p>{texts[lang].str} Świeradowska 47</p>
+            <p>{texts[lang].str}. Świeradowska 47</p>
             <p>02-662 {texts[lang].city}</p>
             <p>{texts[lang].country}</p>
             <p><span>NIP 5213974332</span><span style={{ marginLeft: "24px" }}>KRS 0000979615</span></p>
@@ -151,7 +152,11 @@ const Home = ({ lang }) => {
             <p style={{ marginBottom: "24px" }}><a href="https://danlexsspot.pl/">www.danlexsspot.pl</a></p>
             <p style={{ marginBottom: "24px" }}>
               <a href="https://www.facebook.com/profile.php?id=100095049682068"><FacebookIcon fontSize="large" /></a>
-              <EmailIcon onClick={contactUs} fontSize="large" className="page__contact-email" />
+              <Tooltip title={texts[lang].contHead}>
+                {/* <IconButton> */}
+                  <EmailIcon onClick={contactUs} fontSize="large" className="page__contact-email" />
+                {/* </IconButton> */}
+              </Tooltip>
             </p>
             <p><Link to="/privacy">{texts[lang].polpr}</Link></p>
           </div>

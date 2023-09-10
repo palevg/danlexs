@@ -16,7 +16,7 @@ const Cookie = ({ lang }) => {
   return cookies.dsalertcookies
     ? <></>
     : <div className="cookie">
-      <div className="cookie__text">{texts[lang].cookie}</div>
+      <div className="cookie__text">{texts[lang].cookie}.</div>
       <div className="cookie__buttons">
         <Button onClick={() => navigate('/privacy')} style={{ textTransform: 'none', width: '160px' }} variant="outlined">{texts[lang].cookmore}</Button>
         <Button onClick={acceptCookies} style={{ textTransform: 'none', width: '160px' }} variant="contained">{texts[lang].cookacc}</Button>

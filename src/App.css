@@ -409,7 +409,7 @@ ul {
 .page__contact-email {
     margin-left: 48px;
     cursor: pointer;
-    transition: all .8s;
+    transition: all .8s !important;
 }
 
 .page__contact-email:hover {

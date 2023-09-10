@@ -7,7 +7,7 @@ const AppRouter = (props) => {
   return (
     <Routes>
       <Route index element={<Home lang={props.lang} />} />
-      <Route path='/privacy' element={<Privacy />} />
+      <Route path='/privacy' element={<Privacy lang={props.lang} />} />
       <Route path="*" element={<Home lang={props.lang} />} />
     </Routes>
   )

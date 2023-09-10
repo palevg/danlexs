@@ -4,6 +4,8 @@ import Header from './components/Header';
 import AppRouter from './components/AppRouter';
 import Footer from './components/Footer';
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const getAppLang = () => {
@@ -19,6 +21,7 @@ function App() {
     <BrowserRouter>
       <a href="anchor" name="home"></a>
       <Header lang={lang} updateLang={updateLang} />
+      <ToastContainer position="top-center" />
       <AppRouter lang={lang} />
       <Footer />
     </BrowserRouter>

@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { Box, Dialog, DialogTitle, DialogContent, TextField, DialogActions, Button } from "@mui/material";
 import { texts } from "../data";
+import { toast } from 'react-toastify';
 
 export const SendEmail = (props) => {
   const [open, setOpen] = useState(props.open);
@@ -26,9 +27,9 @@ export const SendEmail = (props) => {
     const values = getValues();
     emailjs.send('service_qplg3jn', 'template_s5vbx1x', values, 'o4gBDD3KUoeSh4WcC')
       .then((result) => {
-        alert(texts[props.lang].resEmail1);
+        toast.success(texts[props.lang].resEmail1);
       }, (error) => {
-        alert(texts[props.lang].resEmail0);
+        toast.error(texts[props.lang].resEmail0);
       });
     handleCancelClick();
   }
