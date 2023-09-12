@@ -36,7 +36,7 @@ ul {
     background-image: linear-gradient(to right, #000000, #3533cd);
 }
 
-.page__anchors-wrap {
+/* .page__anchors-wrap {
     width: 152px;
     height: 40px;
     border-radius: 20px;
@@ -63,7 +63,7 @@ ul {
 
 .page__anchors>div {
     padding-bottom: 12px;
-}
+} */
 
 /* Cookies */
 .cookie {
@@ -305,11 +305,20 @@ ul {
     max-width: 240px;
     color: #136FC2;
     margin: 8px auto;
+    cursor: pointer;
 }
 
 .page__tech-block>div {
     color: #002F69;
     line-height: 1.5;
+}
+
+.page__tech-block-det {
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .page__offer>div {
@@ -417,9 +426,9 @@ ul {
     transition: all .8s;
 }
 
-.page__privacy {
+/* .page__privacy {
     padding: 32px 16px;
-}
+} */
 
 .page__privacy>h2 {
     color: orange;
@@ -509,6 +518,7 @@ ul {
     .cookie {
         padding: 24px 16px;
     }
+
     .header__nav {
         background-color: blue;
         background-image: -webkit-linear-gradient(right, #000000, #3533cd);
@@ -534,6 +544,10 @@ ul {
     .page__contact-img {
         gap: 64px;
         height: 464px;
+    }
+
+    .page__privacy>h2 {
+        font-size: 28px;
     }
 
     .footer {
@@ -623,8 +637,12 @@ ul {
         height: 300px;
     }
 
+    .page__privacy {
+        font-size: 14px;
+    }
+
     .page__privacy>h2 {
-        font-size: 32px;
+        font-size: 20px;
     }
 
     .footer {

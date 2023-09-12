@@ -1,10 +1,8 @@
-import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import { Button } from '@mui/material';
 import { texts } from "../data";
 
-const Cookie = ({ lang }) => {
-  const navigate = useNavigate();
+const Cookie = ({ stateModal, lang }) => {
   const [cookies] = useCookies(['dsalertcookies']);
 
   const acceptCookies = () => {
@@ -18,7 +16,7 @@ const Cookie = ({ lang }) => {
     : <div className="cookie">
       <div className="cookie__text">{texts[lang].cookie}.</div>
       <div className="cookie__buttons">
-        <Button onClick={() => navigate('/privacy')} style={{ textTransform: 'none', width: '160px' }} variant="outlined">{texts[lang].cookmore}</Button>
+        <Button onClick={() => stateModal(true)} style={{ textTransform: 'none', width: '160px' }} variant="outlined">{texts[lang].cookmore}</Button>
         <Button onClick={acceptCookies} style={{ textTransform: 'none', width: '160px' }} variant="contained">{texts[lang].cookacc}</Button>
       </div>
     </div>

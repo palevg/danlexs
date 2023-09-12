@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
-import AppRouter from './components/AppRouter';
+import Home from './pages/Home';
 import Footer from './components/Footer';
 import './App.css';
 import { ToastContainer } from 'react-toastify';
@@ -18,13 +17,13 @@ function App() {
   const updateLang = (value) => { setLang(value); }
 
   return (
-    <BrowserRouter>
+    <>
       <a href="anchor" name="home"></a>
       <Header lang={lang} updateLang={updateLang} />
       <ToastContainer position="top-center" />
-      <AppRouter lang={lang} />
+      <Home lang={lang} />
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 

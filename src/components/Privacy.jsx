@@ -1,14 +1,9 @@
-import { useEffect } from "react";
 import { texts } from "../data";
 
 const Privacy = ({ lang }) => {
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <article className="page__privacy">
+    <div className="page__privacy">
       <h2>{texts[lang].polpr.toUpperCase()} {texts[lang].ppServ.toUpperCase()}<br />www.danlexsspot.pl</h2>
       <p>{texts[lang].pp01} <span className="highlight">Danlexs Spot {texts[lang].opf}</span>{texts[lang].pp02}. {texts[lang].pp03} <span className="highlight">www.danlexsspot.pl</span> {texts[lang].pp04}. <span className="highlight">Danlexs Spot {texts[lang].opf}</span>{texts[lang].pp05}.</p>
       <p>{texts[lang].pp06} <em>({texts[lang].pp07})</em>. {texts[lang].pp08} <span className="highlight">www.danlexsspot.pl</span> <em>({texts[lang].pp09})</em>, {texts[lang].pp10}.</p>
@@ -132,7 +127,7 @@ const Privacy = ({ lang }) => {
         </li>
       </ol>
       <p style={{ marginTop: "32px" }}>{texts[lang].pp84}.</p>
-    </article>
+    </div>
   )
 }
 

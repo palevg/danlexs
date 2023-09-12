@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
 import Cookie from "../components/Cookie";
+import SendEmail from "../components/SendEmail";
+import Modal from "../components/Modal";
 import { texts } from "../data";
 import logo from "../images/logo.png";
 import imgStart from "../images/start.webp";
@@ -14,31 +15,26 @@ import imgWagon from "../images/wagon.jpg";
 import imgSilos from "../images/silos.jpg";
 import imgHigien from "../images/higien.jpg";
 import imgZabaw from "../images/zabaw.jpg";
+import imgContact from "../images/contact.webp";
 import { Tooltip } from "@mui/material";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
-import imgContact from "../images/contact.webp";
-import { SendEmail } from "../components/SendEmail";
 
 const Home = ({ lang }) => {
   const [openDialog, setOpenDialog] = useState(false);
   const stateDialog = (value) => { setOpenDialog(value); }
+  const [openModal, setOpenModal] = useState(false);
+  const stateModal = (value) => { setOpenModal(value); }
+  const [content, setContent] = useState(0);
 
-  const contactUs = () => {
-    setOpenDialog(true);
+  const handlePrivacyClick = (content) => {
+    setContent(content);
+    setOpenModal(true);
   }
+
   return (
     <main className="page">
-      <Cookie lang={lang} />
-      <div className="page__anchors-wrap">
-        <div className="page__anchors">
-          <div><a href="/#home">{texts[lang].miMain}</a></div>
-          <div><a href="/#about">{texts[lang].miAbout}</a></div>
-          <div><a href="/#tech">{texts[lang].miTech}</a></div>
-          <div><a href="/#oferta">{texts[lang].miOffer}</a></div>
-          <div><a href="/#contact">{texts[lang].miContact}</a></div>
-        </div>
-      </div>
+      <Cookie stateModal={stateModal} lang={lang} />
       <article className="page__start bg-gradient">
         <div>
           <div className="page__start-name">
@@ -67,22 +63,25 @@ const Home = ({ lang }) => {
             <figure>
               <img src={imgHLU} alt={texts[lang].te1h} />
             </figure>
-            <h5>{texts[lang].te1h}</h5>
+            <h5 onClick={() => handlePrivacyClick(2)}>{texts[lang].te1h}</h5>
             <div>{texts[lang].te1desc}.</div>
+            <div className="page__tech-block-det" onClick={() => handlePrivacyClick(2)}>{texts[lang].teMore}...</div>
           </div>
           <div className="page__tech-block">
             <figure>
               <img src={imgInfus} alt={texts[lang].te2h} />
             </figure>
-            <h5>{texts[lang].te2h}</h5>
+            <h5 onClick={() => handlePrivacyClick(3)}>{texts[lang].te2h}</h5>
             <div>{texts[lang].te2desc}.</div>
+            <div className="page__tech-block-det" onClick={() => handlePrivacyClick(3)}>{texts[lang].teMore}...</div>
           </div>
           <div className="page__tech-block">
             <figure>
               <img src={imgNapyl} alt={texts[lang].te3h} />
             </figure>
-            <h5>{texts[lang].te3h}</h5>
+            <h5 onClick={() => handlePrivacyClick(4)}>{texts[lang].te3h}</h5>
             <div>{texts[lang].te3desc}.</div>
+            <div className="page__tech-block-det" onClick={() => handlePrivacyClick(4)}>{texts[lang].teMore}...</div>
           </div>
         </div>
       </article>
@@ -153,12 +152,10 @@ const Home = ({ lang }) => {
             <p style={{ marginBottom: "24px" }}>
               <a href="https://www.facebook.com/profile.php?id=100095049682068"><FacebookIcon fontSize="large" /></a>
               <Tooltip title={texts[lang].contHead}>
-                {/* <IconButton> */}
-                  <EmailIcon onClick={contactUs} fontSize="large" className="page__contact-email" />
-                {/* </IconButton> */}
+                <EmailIcon onClick={() => setOpenDialog(true)} fontSize="large" className="page__contact-email" />
               </Tooltip>
             </p>
-            <p><Link to="/privacy">{texts[lang].polpr}</Link></p>
+            <p onClick={() => handlePrivacyClick(1)} style={{ cursor: "pointer" }}>{texts[lang].polpr}</p>
           </div>
         </div>
         <div className="page__contact-img">
@@ -167,6 +164,7 @@ const Home = ({ lang }) => {
         </div>
       </article>
       {openDialog && <SendEmail open={openDialog} stateDialog={stateDialog} lang={lang} />}
+      {openModal && <Modal openModal={openModal} stateModal={stateModal} content={content} lang={lang} />}
     </main>
   )
 }
