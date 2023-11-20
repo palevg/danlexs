@@ -72,7 +72,7 @@ const Privacy = ({ lang }) => {
           <ol>
             <li><strong>{texts[lang].pp50}</strong>
               <p>{texts[lang].pp51}.</p>
-              <p>{texts[lang].pp52}: <span className="highlight">Danlexs Spot {texts[lang].opf} {texts[lang].str}. Świeradowska 47, 02-662 {texts[lang].city}, {texts[lang].country}, NIP 5213974332,</span> <a href="mailto:danlexsspot@gmail.com">danlexsspot@gmail.com</a></p>
+              <p>{texts[lang].pp52}: <span className="highlight">Danlexs Spot {texts[lang].opf} {texts[lang].str}. Świeradowska 47, 02-662 {texts[lang].city}, {texts[lang].country}, NIP 5213974332,</span> <a href="mailto:danlexsspot.biuro@gmail.com">danlexsspot.biuro@gmail.com</a></p>
             </li>
             <li><strong>{texts[lang].pp53}</strong>
               <div>{texts[lang].pp54}.</div>
@@ -120,7 +120,7 @@ const Privacy = ({ lang }) => {
               <p>{texts[lang].pp80}.</p>
             </li>
             <li><strong>{texts[lang].pp81}</strong>
-              <p>{texts[lang].pp82}: <span className="highlight">Danlexs Spot {texts[lang].opf} {texts[lang].str}. Świeradowska 47, 02-662 {texts[lang].city}, {texts[lang].country}, NIP 5213974332,</span> <a href="mailto:danlexsspot@gmail.com">danlexsspot@gmail.com</a></p>
+              <p>{texts[lang].pp82}: <span className="highlight">Danlexs Spot {texts[lang].opf} {texts[lang].str}. Świeradowska 47, 02-662 {texts[lang].city}, {texts[lang].country}, NIP 5213974332,</span> <a href="mailto:danlexsspot.biuro@gmail.com">danlexsspot.biuro@gmail.com</a></p>
               <div>{texts[lang].pp83}: <span className="highlight">02-662 {texts[lang].city}, {texts[lang].str}. Świeradowska 47</span></div>
             </li>
           </ol>

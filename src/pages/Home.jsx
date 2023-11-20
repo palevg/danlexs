@@ -3,7 +3,7 @@ import Cookie from "../components/Cookie";
 import SendEmail from "../components/SendEmail";
 import Modal from "../components/Modal";
 import { texts } from "../data";
-import logo from "../images/logo.png";
+import logo from "../images/danlexs.png";
 import imgStart from "../images/start.webp";
 import imgAbout from "../images/about.png";
 import imgHLU from "../images/hlu.jpg";
@@ -37,10 +37,7 @@ const Home = ({ lang }) => {
       <Cookie stateModal={stateModal} lang={lang} />
       <article className="page__start bg-gradient">
         <div>
-          <div className="page__start-name">
-            <img className="page__start-logo" src={logo} alt="logo" />
-            <h1 className="page__start-header">Danlexs Spot Kompozyt</h1>
-          </div>
+          <img className="page__start-logo" src={logo} alt="logo" />
           <div className="page__start-descr">{texts[lang].mProj}</div>
         </div>
         <div>
@@ -147,7 +144,7 @@ const Home = ({ lang }) => {
             <p><span>NIP 5213974332</span><span style={{ marginLeft: "24px" }}>KRS 0000979615</span></p>
             <p style={{ marginBottom: "24px" }}>Regon 522427881</p>
             <p><a href="tel:+48886684189">tel. +48 886 684 189</a></p>
-            <p>e-mail: <a href="mailto:danlexsspot@gmail.com">danlexsspot@gmail.com</a></p>
+            <p>e-mail: <a href="mailto:danlexsspot.biuro@gmail.com">danlexsspot.biuro@gmail.com</a></p>
             <p style={{ marginBottom: "24px" }}><a href="https://danlexsspot.pl/">www.danlexsspot.pl</a></p>
             <p style={{ marginBottom: "24px" }}>
               <a href="https://www.facebook.com/profile.php?id=100095049682068"><FacebookIcon fontSize="large" /></a>
