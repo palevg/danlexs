@@ -2,8 +2,7 @@ import { useState } from "react";
 import { TextField, Box, MenuItem } from '@mui/material';
 import { texts } from "../data";
 
-const Header = (props) => {
-  const [lang, setLang] = useState(props.lang);
+const Header = ({ lang, setLang }) => {
 
   const languages = [
     { code: 'PL', id: 0, text: 'Polski' },
@@ -14,7 +13,6 @@ const Header = (props) => {
   const handleChangeLang = (value) => {
     setLang(value);
     window.localStorage.setItem('dslang', value);
-    props.updateLang(value);
   }
 
   const handleMenuClick = () => {

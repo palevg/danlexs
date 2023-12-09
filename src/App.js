@@ -9,17 +9,15 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const getAppLang = () => {
     let dslang = window.localStorage.getItem('dslang');
-    if (dslang === null) dslang = 0
-    else dslang = +dslang;
+    dslang === null ? dslang = 0 : dslang = +dslang;
     return dslang;
   }
   const [lang, setLang] = useState(getAppLang());
-  const updateLang = (value) => { setLang(value); }
 
   return (
     <>
       <a href="anchor" name="home"></a>
-      <Header lang={lang} updateLang={updateLang} />
+      <Header lang={lang} setLang={setLang} />
       <ToastContainer position="top-center" />
       <Home lang={lang} />
       <Footer />

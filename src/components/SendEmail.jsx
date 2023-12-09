@@ -1,12 +1,10 @@
-import { useState } from "react";
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { Dialog, DialogTitle, DialogContent, TextField, DialogActions, Button } from "@mui/material";
 import { texts } from "../data";
 import { toast } from 'react-toastify';
 
-const SendEmail = (props) => {
-  const [open, setOpen] = useState(props.open);
+const SendEmail = ({ openDialog, setOpenDialog, lang }) => {
 
   const { register, getValues, formState: { errors, isValid } } = useForm({
     defaultValues: {
@@ -18,38 +16,33 @@ const SendEmail = (props) => {
     mode: 'onChange'
   });
 
-  const handleCancelClick = () => {
-    setOpen(false);
-    props.stateDialog(false);
-  }
-
   const sendEmail = () => {
     const values = getValues();
     emailjs.send('service_qplg3jn', 'template_s5vbx1x', values, 'o4gBDD3KUoeSh4WcC')
       .then((result) => {
-        toast.success(texts[props.lang].resEmail1);
+        toast.success(texts[lang].resEmail1);
       }, (error) => {
-        toast.error(texts[props.lang].resEmail0);
+        toast.error(texts[lang].resEmail0);
       });
-    handleCancelClick();
+    setOpenDialog(false);
   }
 
   return (
     <form>
       <Dialog
         maxWidth="sm"
-        open={open}
+        open={openDialog}
       >
         <DialogTitle textAlign="center" sx={{ fontSize: "28px", fontWeight: "bold", color: "orange" }}>
-          {texts[props.lang].contHead}
+          {texts[lang].contHead}
         </DialogTitle>
         <DialogContent dividers>
           <TextField
             sx={{ mb: 2 }}
-            label={texts[props.lang].contName}
+            label={texts[lang].contName}
             error={Boolean(errors.name?.message)}
             helperText={errors.name?.message}
-            {...register('name', { required: texts[props.lang].reqField })}
+            {...register('name', { required: texts[lang].reqField })}
             size="small"
             fullWidth
           />
@@ -60,9 +53,9 @@ const SendEmail = (props) => {
             helperText={errors.email?.message}
             type="email"
             {...register('email', {
-              required: texts[props.lang].reqField, pattern: {
+              required: texts[lang].reqField, pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: texts[props.lang].badEmail
+                message: texts[lang].badEmail
               }
             })}
             size="small"
@@ -70,27 +63,27 @@ const SendEmail = (props) => {
           />
           <TextField
             sx={{ mb: 2 }}
-            label={texts[props.lang].contSubj}
+            label={texts[lang].contSubj}
             error={Boolean(errors.subject?.message)}
             helperText={errors.subject?.message}
-            {...register('subject', { required: texts[props.lang].reqField })}
+            {...register('subject', { required: texts[lang].reqField })}
             size="small"
             fullWidth
           />
           <TextField
-            label={texts[props.lang].contText}
+            label={texts[lang].contText}
             multiline
             minRows={3}
             maxRows={6}
             error={Boolean(errors.text?.message)}
             helperText={errors.text?.message}
-            {...register('text', { required: texts[props.lang].reqField })}
+            {...register('text', { required: texts[lang].reqField })}
             size="small"
             fullWidth />
         </DialogContent>
         <DialogActions>
-          <Button disabled={!isValid} onClick={sendEmail} variant="contained">{texts[props.lang].send}</Button>
-          <Button sx={{ mr: 2 }} onClick={handleCancelClick} variant="outlined">{texts[props.lang].cancel}</Button>
+          <Button disabled={!isValid} onClick={sendEmail} variant="contained">{texts[lang].send}</Button>
+          <Button sx={{ mr: 2 }} onClick={() => setOpenDialog(false)} variant="outlined">{texts[lang].cancel}</Button>
         </DialogActions>
       </Dialog>
     </form>

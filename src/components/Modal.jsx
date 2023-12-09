@@ -1,23 +1,16 @@
-import { useState } from "react";
 import { Dialog, DialogContent, DialogActions, Button } from "@mui/material";
 import Privacy from "./Privacy";
 import TechLaminat from "./TechLam";
 import TechInfusion from "./TechInfuz";
 import TechSpray from "./TechSpray";
 
-const Modal = ({ openModal, stateModal, content, lang }) => {
-  const [open, setOpen] = useState(openModal);
-
-  const handleClose = () => {
-    setOpen(false);
-    stateModal(false);
-  };
+const Modal = ({ openModal, setOpenModal, content, lang }) => {
 
   return (
     <>
       <Dialog
-        open={open}
-        onClose={handleClose}
+        open={openModal}
+        onClose={() => setOpenModal(false)}
         maxWidth={content === 1 ? false : "md"}
         scroll="paper"
       >
@@ -28,7 +21,7 @@ const Modal = ({ openModal, stateModal, content, lang }) => {
           {content === 4 && <TechSpray lang={lang} />}
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} variant="contained">Ok</Button>
+          <Button onClick={() => setOpenModal(false)} variant="contained">Ok</Button>
         </DialogActions>
       </Dialog>
     </>

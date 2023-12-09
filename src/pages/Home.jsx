@@ -22,9 +22,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Home = ({ lang }) => {
   const [openDialog, setOpenDialog] = useState(false);
-  const stateDialog = (value) => { setOpenDialog(value); }
   const [openModal, setOpenModal] = useState(false);
-  const stateModal = (value) => { setOpenModal(value); }
   const [content, setContent] = useState(0);
 
   const handlePrivacyClick = (content) => {
@@ -34,7 +32,7 @@ const Home = ({ lang }) => {
 
   return (
     <main className="page">
-      <Cookie stateModal={stateModal} lang={lang} />
+      <Cookie lang={lang} setOpenModal={setOpenModal} setContent={setContent} />
       <article className="page__start bg-gradient">
         <div>
           <img className="page__start-logo" src={logo} alt="logo" />
@@ -160,8 +158,8 @@ const Home = ({ lang }) => {
           <img src={imgContact} alt={texts[lang].miContact} />
         </div>
       </article>
-      {openDialog && <SendEmail open={openDialog} stateDialog={stateDialog} lang={lang} />}
-      {openModal && <Modal openModal={openModal} stateModal={stateModal} content={content} lang={lang} />}
+      {openDialog && <SendEmail openDialog={openDialog} setOpenDialog={setOpenDialog} lang={lang} />}
+      {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal} content={content} lang={lang} />}
     </main>
   )
 }
